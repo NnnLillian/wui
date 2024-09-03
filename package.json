@@ -1,0 +1,48 @@
+{
+  "name": "jui",
+  "version": "1.0.0",
+  "description": "jj common frontend ui system",
+  "main": "./src/index.js",
+  "private": true,
+  "scripts": {
+    "doc": "styleguidist server",
+    "doc:build": "styleguidist build"
+  },
+  "files": [
+    "dist/*",
+    "lib/*"
+  ],
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
+    "react-docgen-typescript": "^2.2.2",
+    "react-styleguidist": "^13.1.3",
+    "style-loader": "^4.0.0",
+    "typescript": "^5.5.4",
+    "webpack": "^5.94.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.web.jjweb.cn/web_client/jj_npm_modules/jui.git"
+  },
+  "author": "jj fe bulls & horses",
+  "license": "ISC",
+  "browserslist": [
+    ">1%",
+    "last 1 version",
+    "Firefox ESR",
+    "not dead"
+  ]
+}
