@@ -1,39 +1,41 @@
 {
-	"name": "jui",
-	"version": "1.0.0",
-	"type": "module",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "rslib build",
-		"check": "biome check --write",
-		"dev": "rslib build --watch",
-		"format": "biome format --write",
-		"copy": "cpr package.json jui_dev/package.json -o && cpr dist jui_dev/dist -o",
+  "name": "jui",
+  "version": "1.0.0",
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write",
+    "copy": "cpr package.json jui_dev/package.json -o && cpr dist jui_dev/dist -o",
     "docs:dev": "dumi dev",
-		"docs:build": "dumi build",
-		"docs:preview": "dumi preview"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.3",
-		"@rsbuild/plugin-less": "^1.1.0",
-		"@rsbuild/plugin-react": "^1.0.7",
-		"@rslib/core": "^0.1.3",
-		"@types/react": "^18.3.12",
-		"cpr": "^3.0.1",
-		"react": "^18.3.1",
-		"typescript": "^5.6.3"
-	},
-	"peerDependencies": {
-		"react": ">=16.9.0",
-		"react-dom": ">=16.9.0"
-	},
-	"private": true,
-	"dependencies": {
-		"classnames": "^2.5.1",
-		"dumi": "^2.4.16"
-	}
+    "docs:build": "dumi build",
+    "docs:preview": "dumi preview"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@rsbuild/plugin-less": "^1.1.0",
+    "@rsbuild/plugin-react": "^1.0.7",
+    "@rslib/core": "^0.1.3",
+    "@types/react": "^18.3.12",
+    "cpr": "^3.0.1",
+    "react": "^18.3.1",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "dumi": "^2.4.16",
+    "dumi-theme-antd": "^0.4.2",
+    "styled-components": "^6.1.13"
+  }
 }

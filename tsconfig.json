@@ -1,19 +1,19 @@
 {
-	"compilerOptions": {
-		"lib": ["DOM", "ES2021"],
-		"module": "ESNext",
-		"jsx": "react-jsx",
-		"strict": true,
-		"skipLibCheck": true,
-		"isolatedModules": true,
-		"resolveJsonModule": true,
-		"moduleResolution": "bundler",
-		"useDefineForClassFields": true,
+  "compilerOptions": {
+    "lib": ["DOM", "ES2021"],
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
     "baseUrl": "./",
-		"paths": {
-			"jui": ["src"],
-			"jui/*": ["src/*", "*"]
-		}
-	},
-	"include": ["src"]
+    "paths": {
+      "jui": ["src"],
+      "jui/*": ["src/*", "*"]
+    }
+  },
+  "include": ["src",".dumirs.ts"]
 }
