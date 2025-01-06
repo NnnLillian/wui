@@ -29,7 +29,7 @@ export interface ButtonProps {
   /**
    * @description 点击事件
    */
-  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   /**
    * @description 页面名称
    */
@@ -53,20 +53,23 @@ export interface ButtonProps {
 
 const prefixCls = "ui-btn";
 
-export const Button = React.forwardRef<PropsWithChildren<ButtonProps>>(({
-  disable = false,
-  className = "",
-  border = false,
-  type = "primary",
-  size = "small",
-  block = false,
-  style, loading,
-  onClick,
-  children,
-}: PropsWithChildren<ButtonProps>, ref: any) => {
+export const Button = React.forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>((props, ref) => {
+
+  const {
+    disable = false,
+    className = "",
+    border = false,
+    type = "primary",
+    size = "small",
+    block = false,
+    style,
+    loading,
+    onClick,
+    children,
+  } = props
 
   const handleClick = React.useCallback(
-    (e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+    (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
       e.stopPropagation();
 
       if (disable || loading) {
@@ -87,12 +90,12 @@ export const Button = React.forwardRef<PropsWithChildren<ButtonProps>>(({
   })
 
   return (
-    <div
+    <button
       ref={ref}
       style={style}
       onClick={handleClick}
       className={classes}>
       {children}
-    </div>
+    </button>
   );
 });

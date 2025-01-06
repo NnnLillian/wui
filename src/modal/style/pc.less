@@ -1,0 +1,112 @@
+.ui-modal-wrap {
+    &.ui-modal-placement-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ui-modal {
+            margin: 0 auto;
+            &.ui-modal-pc {
+                box-sizing: border-box;
+                .ui-modal-header {
+                    height: 0.4rem;
+                    font-size: 0.2rem;
+                    line-height: 0.4rem;
+                    color: #ffffff;
+                }
+                .ui-modal-close {
+                    width: 0.16rem;
+                    height: 0.16rem;
+                    position: absolute;
+                    top: 0.36rem;
+                    right: 0.46rem;
+                    cursor: pointer;
+                    background: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/close.png) no-repeat center;
+                    background-size: 0.14rem 0.14rem;
+                    &:hover {
+                        background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/close_hover.png);
+                    }
+                }
+                .ui-modal-body {
+                    padding: 0.2rem 0.3rem;
+                    position: relative;
+                    color: #3d3d3d;
+                    font-size: 0.18rem;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+                .ui-modal-footer {
+                    height: 0.8rem;
+                    line-height: 0.8rem;
+                    .ui-modal-btn {
+                        position: relative;
+                        box-sizing: border-box;
+                        margin: 0;
+                        font-size: 0.18rem;
+                        width: 1.9rem;
+                        height: 0.7rem;
+                        letter-spacing: 2px;
+                        &.ui-modal-btn-cancel {
+                            color: #489fd6;
+                            background: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/s_cancel_bg.png)
+                                no-repeat top 0.12rem center;
+                            background-size: 1.6rem 0.38rem;
+                            line-height: 0.62rem;
+                            &:hover {
+                                background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/s_cancel_bg_hover.png);
+                            }
+                        }
+                        &.ui-modal-btn-ok {
+                            color: #ffffff;
+                            background: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/s_ok_bg.png)
+                                no-repeat top center;
+                            background-size: contain;
+                            line-height: 0.62rem;
+                            &:hover {
+                                background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/s_ok_bg_hover.png);
+                            }
+                        }
+                    }
+                }
+                &.ui-modal-size-small {
+                    width: 5.13rem;
+                    height: 3.34rem;
+                    padding: 0.24rem 0.22rem;
+                    background: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/bg_small.png) no-repeat
+                        center;
+                    background-size: contain;
+                }
+                &.ui-modal-size-large {
+                    width: 7.29rem;
+                    height: 5.4rem;
+                    padding: 0.24rem;
+                    background: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/bg_large.png) no-repeat
+                        center;
+                    background-size: contain;
+                    .ui-modal-footer {
+                        .ui-modal-btn {
+                            width: 3.1rem;
+                            &.ui-modal-btn-cancel {
+                                background: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/l_cancel_bg.png)
+                                    no-repeat top 0.12rem center;
+                                background-size: 2.8rem 0.38rem;
+                                &:hover {
+                                    background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/l_cancel_bg_hover.png);
+                                }
+                            }
+                            &.ui-modal-btn-ok {
+                                color: #ffffff;
+                                background: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/l_ok_bg.png)
+                                    no-repeat top center;
+                                background-size: contain;
+                                &:hover {
+                                    background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/pc/l_ok_bg_hover.png);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

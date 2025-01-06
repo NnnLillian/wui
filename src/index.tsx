@@ -1,5 +1,12 @@
 export { default as Button } from "./button/index";
-export { default as SimpleGrid } from "./simpleGrid/index";
+// export { default as Center } from "./center/index";
+export { default as Checkbox } from "./checkbox/index";
 export { default as Flex } from "./flex/index";
-export { default as Center } from "./center/index";
-export { default as Space } from "./space/index";
+// export { default as Form } from "./form/index";
+// export { default as Input } from "./input/index";
+// export { default as Modal } from "./modal/index";
+// export { default as Portal } from "./portal/index";
+// export { default as Radio } from "./radio/index";
+// export { default as SimpleGrid } from "./simpleGrid/index";
+// export { default as Space } from "./space/index";
+// export { default as Textarea } from "./textarea/index";

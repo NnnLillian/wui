@@ -1,0 +1,163 @@
+.ui-modal-wrap {
+    &.ui-modal-placement-right {
+        .ui-modal {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 6.5rem;
+            background: url(https://static.jjbisai.com/mall/imgs/components/Modal/Drawer/h/bg.png) no-repeat left center;
+            background-size: auto 100%;
+
+            .ui-modal-close {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 4.25%;
+                z-index: 1;
+                width: 0.56rem;
+                height: 2.54rem;
+                padding: 0;
+                margin: auto 0;
+                background: url(https://static.jjbisai.com/mall/imgs/components/Modal/Drawer/h/close.png) no-repeat left
+                    center;
+                background-size: contain;
+            }
+        }
+    }
+
+    &.ui-modal-placement-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ui-modal {
+            &.ui-modal-horizontal {
+                box-sizing: border-box;
+
+                .ui-modal-header {
+                    position: relative;
+                    width: 0.95rem;
+                    height: 0.58rem;
+                    margin: 0.08rem auto 0;
+                    font-size: 0;
+                    line-height: 0;
+                    background: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/title_text.png)
+                        no-repeat center;
+                    background-size: 100% auto;
+                }
+                .ui-modal-close {
+                    position: absolute;
+                    top: 0.35rem;
+                    right: 0.3rem;
+                    z-index: 1;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    background: no-repeat center;
+                    background-size: contain;
+                }
+                .ui-modal-body {
+                    position: relative;
+                    box-sizing: border-box;
+                    padding: 0.15rem 0.7rem;
+                    text-align: center;
+                    color: #e2f2ff;
+                }
+                .ui-modal-footer {
+                    height: 0.84rem;
+                    line-height: 0.84rem;
+                    .ui-modal-btn {
+                        position: relative;
+                        margin: 0;
+                        font-size: 0;
+                        line-height: 0.84rem;
+                        background: no-repeat center;
+                        background-size: contain;
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            width: 0.88rem;
+                            height: 0.55rem;
+                            margin: 0.15rem auto 0;
+                            background: no-repeat center;
+                            background-size: contain;
+                        }
+
+                        &.ui-modal-btn-cancel {
+                            &::after {
+                                background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/cancel_text.png);
+                            }
+                        }
+
+                        &.ui-modal-btn-ok {
+                            &::after {
+                                width: 0.51rem;
+                                height: 0.26rem;
+                                margin: 0.2rem auto 0;
+                                background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/ok_text.png);
+                            }
+                        }
+                    }
+                }
+
+                &.ui-modal-size-small {
+                    width: 6.39rem;
+                    height: 3.72rem;
+                    margin: 0 auto;
+                    padding: 0.17rem 0.31rem 0.45rem;
+                    background: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/bg_small.png)
+                        no-repeat center;
+                    background-size: contain;
+
+                    .ui-modal-footer {
+                        .ui-modal-btn {
+                            width: 2.33rem;
+                            height: 0.84rem;
+                            margin: 0;
+
+                            &.ui-modal-btn-cancel {
+                                background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/s_cancel_bg.png);
+                            }
+
+                            &.ui-modal-btn-ok {
+                                background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/s_ok_bg.png);
+                            }
+                        }
+                    }
+                }
+
+                &.ui-modal-size-large {
+                    width: 8.28rem;
+                    height: 5.4rem;
+                    margin: 0 auto;
+                    padding: 0.17rem 0.31rem 0.45rem;
+                    background: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/bg_large.png)
+                        no-repeat center;
+                    background-size: contain;
+
+                    .ui-modal-body {
+                        padding: 0.3rem 0.85rem;
+                    }
+                    .ui-modal-footer {
+                        .ui-modal-btn {
+                            width: 2.91rem;
+                            height: 0.85rem;
+                            margin: 0;
+                            &.ui-modal-btn-cancel {
+                                background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/l_cancel_bg.png);
+                            }
+
+                            &.ui-modal-btn-ok {
+                                background-image: url(https://static.jjbisai.com/mall/imgs/components/Modal/Popup/h/l_ok_bg.png);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

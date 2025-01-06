@@ -1,0 +1,17 @@
+.ui-radio {
+	.ui-radio-item {
+		display: flex-inline;
+		align-items: center;
+		input[type="radio"] {
+			cursor: pointer;
+		}
+		.ui-radio-inner {
+			overflow: hidden;
+		}
+		&.ui-radio-item-disable {
+			input[type="radio"] {
+				cursor: not-allowed;
+			}
+		}
+	}
+}
