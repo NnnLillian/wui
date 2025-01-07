@@ -24,9 +24,9 @@ export const InternalCheckbox: React.FunctionComponent<PropsWithChildren<Checkbo
 	};
 
 	return (
-		<label className="ui-checkbox">
+		<div className="ui-checkbox">
 			<input type="checkbox" checked={isChecked} value={value} onChange={handleCheckboxChange} />
-			{children}
-		</label>
+			<span>{children}</span>
+		</div>
 	);
 };
