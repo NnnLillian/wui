@@ -1,4 +1,4 @@
-import React, { FunctionComponent, PropsWithChildren, ReactNode, useEffect } from "react";
+import React, { PropsWithChildren, ReactNode, useEffect } from "react";
 import Animate, { AnimateType } from "../animate/index";
 import Button, { ButtonProps } from "../button/index";
 import Portal from "../portal/index";
@@ -111,7 +111,7 @@ interface ModalCloseProps extends ModalProps {
 const prefixCls = "ui-modal";
 const prefixClsBtn = "ui-modal-btn";
 
-export const Modal: FunctionComponent<PropsWithChildren<ModalCloseProps>> = (props: PropsWithChildren<ModalCloseProps>) => {
+export const Modal: React.FunctionComponent<PropsWithChildren<ModalCloseProps>> = (props: PropsWithChildren<ModalCloseProps>) => {
 	const {
 		open,
 		title = "",

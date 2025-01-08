@@ -1,3 +1,4 @@
+import React from "react";
 import rcUtil from "../utils/rcutil/index";
 import { Modal, ModalProps } from "./modal";
 
