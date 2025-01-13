@@ -1,4 +1,4 @@
-import { FunctionComponent, PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
 import ReactDOM from "react-dom";
 
 export interface PortalProps {
@@ -6,7 +6,7 @@ export interface PortalProps {
 	className?: string;
 }
 
-export const Portal: FunctionComponent<PropsWithChildren<PortalProps>> = ({ children, getContainer, className = "" }: PropsWithChildren<PortalProps>) => {
+export const Portal: React.FunctionComponent<PropsWithChildren<PortalProps>> = ({ children, getContainer, className = "" }: PropsWithChildren<PortalProps>) => {
 	// const ref = useRef<HTMLDivElement>(document.createElement("div"));
 	const rootEle = getContainer ? getContainer() : document.body;
 
@@ -29,5 +29,5 @@ export const Portal: FunctionComponent<PropsWithChildren<PortalProps>> = ({ chil
 	// 	};
 	// }, []);
 
-	return ReactDOM.createPortal(<div className={className}>{children}</div>, rootEle);
+	return ReactDOM.createPortal(<div className={`ui-portal ${className}`}>{children}</div>, rootEle);
 };

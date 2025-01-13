@@ -13,6 +13,7 @@
 		"dev": "rslib build --watch",
 		"format": "biome format --write",
 		"copy": "cpr package.json jui_dev/package.json -o && cpr dist jui_dev/dist -o",
+		"devs": "yarn dev && yarn copy",
 		"docs:dev": "dumi dev",
 		"docs:build": "dumi build",
 		"docs:preview": "dumi preview"
@@ -26,7 +27,9 @@
 		"@types/react-dom": "^18.2.6",
 		"@types/react-transition-group": "^4.4.12",
 		"cpr": "^3.0.1",
-		"typescript": "^5.6.3"
+		"typescript": "^5.6.3",
+		"dumi": "^2.4.16",
+		"dumi-theme-antd": "^0.4.2"
 	},
 	"peerDependencies": {
 		"react": ">=18.0.0",
@@ -35,8 +38,6 @@
 	"private": true,
 	"dependencies": {
 		"classnames": "^2.5.1",
-		"dumi": "^2.4.16",
-		"dumi-theme-antd": "^0.4.2",
 		"react-transition-group": "^4.4.5",
 		"styled-components": "^6.1.13"
 	}

@@ -1,6 +1,6 @@
-import React from "react";
-import rcUtil from "../utils/rcutil/index";
+import React, { useEffect, useState } from "react";
 import { Modal, ModalProps } from "./modal";
+import ReactDOM from "react-dom/client";
 
 export type ModalFunc = (props: ModalProps) => ModalFuncResponse;
 
@@ -12,25 +12,45 @@ const DESTROY_CACHES: Array<() => void> = [];
 
 const confirm: ModalFunc = function (config: ModalProps) {
 	const container = document.createDocumentFragment();
+	const root = ReactDOM.createRoot(container);
 
 	let currentConfig = {
 		...config,
 		// eslint-disable-next-line @typescript-eslint/no-use-before-define
 		close,
-		open: true,
 	};
 
-	function render({ open, page, children, ...other }: ModalProps): void {
-		setTimeout(() => {
-			rcUtil.render(
-				// eslint-disable-next-line @typescript-eslint/no-use-before-define
-				<Modal open={open} maskClosable onCancel={close} page={page} {...other}>
-					{children}
-				</Modal>,
-				container
-			);
-		});
+	function ConfirmComponent() {
+		const [open, setOpen] = useState(true);
+
+		useEffect(() => {
+			if (!open && config.afterClose) {
+				config.afterClose();
+			}
+
+			// Unmount the root after the component has been unmounted
+			return () => {
+				if (!open) {
+					root.unmount();
+				}
+			};
+		}, [open]);
+
+		const close = () => {
+			setOpen(false);
+			destroy();
+		};
+
+		DESTROY_CACHES.push(close);
+
+		return (
+			<Modal open={open} maskClosable onCancel={close} {...currentConfig}>
+				{currentConfig.children}
+			</Modal>
+		);
 	}
+
+	root.render(<ConfirmComponent />);
 
 	function destroy(): void {
 		for (let i = 0; i < DESTROY_CACHES.length; i++) {
@@ -41,27 +61,13 @@ const confirm: ModalFunc = function (config: ModalProps) {
 				break;
 			}
 		}
-		rcUtil.unmount(container);
+		root.unmount();
 	}
-
-	function close(): void {
-		currentConfig = {
-			...currentConfig,
-			open: false,
-			afterClose: (): void => {
-				destroy();
-			},
-		};
-
-		render(currentConfig);
-	}
-
-	render(currentConfig);
-
-	DESTROY_CACHES.push(close);
 
 	return {
-		destroy: close,
+		destroy: () => {
+			root.unmount();
+		},
 	};
 };
 export default confirm;
